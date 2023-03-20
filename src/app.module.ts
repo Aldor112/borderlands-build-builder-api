@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { JwtModule } from '@nestjs/jwt';
+import { PassportModule } from '@nestjs/passport';
+
 import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
@@ -15,6 +17,7 @@ import { AuthModule } from './auth/auth.module';
       useNewUrlParser: true,
       useUnifiedTopology: true,
     }),
+
     {
       ...JwtModule.registerAsync({
         imports: [ConfigModule],
