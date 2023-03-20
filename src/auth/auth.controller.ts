@@ -4,9 +4,6 @@ import { AuthService } from './auth.service';
 import { LoginUser } from './dto/login-user.dto';
 import { RegisterUserDto } from './dto/register-user.dto';
 import { ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
-import { JwtGuard } from 'src/common/guards/jwt-auth.guard';
-import { JwtAuthGuard } from './guards/jwt-auth-guard.guard';
-import { LocalAuthGuard } from 'src/common/guards/local-auth.guard';
 
 @Controller('auth')
 export class AuthController {
